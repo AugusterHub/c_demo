@@ -1,14 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int add(int para1, int para2)
+int add(int a, int b)
 {
-    int a, b;
-    a = para1;
-    b = para2;
-    return a + b;
+    return a * b;
 }
-
 int main(void)
 {
     int i;
