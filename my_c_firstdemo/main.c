@@ -12,6 +12,6 @@ int main(void)
     i = 2;
     i = 10;
     i = add(3, 4);
-    printf("i = %d", i);
+    printf("i = %d\n故障范围内", i);
     return 0;
 }
