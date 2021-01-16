@@ -54,13 +54,35 @@ main()
 }*/
 
 
- //赋值运算
- int main()
+ //2 赋值运算
+/* int main()
  {
      int a;
      float x, y;
      a = 0;
      x = y = 1.5;
-     printf("%d\n%f\n%f\n",a, x, y);
+     printf("%d\n%f\n%f\n", a, x, y);
      return 0;
+ }*/
+
+ // 3.1 数据的格式化输入和输出
+
+/*main()
+ {
+     int a, b;
+     scanf("%d %d", &a, &b); //&是取地址运算符
+     printf("a = %d, b = %d\n", a, b);
+     return 0;
+ }*/
+
+ // 3.2 getchar(), putchar()
+ main()
+ {
+     char ch;
+     printf("please a key and then press enter:");
+     ch = getchar();
+     ch += 32;
+     putchar(ch); // printf("%c",ch)
+     putchar('\n');
+     printf("%c",ch);
  }
