@@ -76,7 +76,7 @@ main()
  }*/
 
  // 3.2 getchar(), putchar()
- main()
+/* main()
  {
      char ch;
      printf("please a key and then press enter:");
@@ -85,4 +85,22 @@ main()
      putchar(ch); // printf("%c",ch)
      putchar('\n');
      printf("%c",ch);
+ }*/
+
+ // 4.1 if-else 语句
+ int main()
+ {
+     int a, b;
+     printf("Input a, b:");
+     scanf("%d %d", &a, &b);
+     if (a > b)
+     {
+         //max = a;
+         printf("max = %d\n",a);
+     }
+     else
+     {
+         //max = b;
+         printf("max = %d\n", b);
+     }
  }
