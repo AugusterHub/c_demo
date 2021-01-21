@@ -88,19 +88,41 @@ main()
  }*/
 
  // 4.1 if-else 语句
- int main()
+ /*int main()
  {
-     int a, b;
+     int a, b, max;
      printf("Input a, b:");
      scanf("%d %d", &a, &b);
-     if (a > b)
+     if (a >= b)
      {
-         //max = a;
-         printf("max = %d\n",a);
+         max = a;
+         printf("max = %d\n", a);
      }
      else
      {
-         //max = b;
+         max = b;
          printf("max = %d\n", b);
      }
+ }*/
+ // for 循环
+/* int main()
+ {
+     int i, sum = 0, m;
+     for(i=0; i<5; i++)// 循环初始条件；循环控制条件；循环转化条件，分号注意！！！
+     {
+         scanf("%d", &m);
+         sum += m;
+     }
+     printf("sum = %d", sum);
+     return 0;
+ }*/
+
+ int main()
+ {
+     int i, j, sum = 0;
+     for(i=1, j=100; i<j; i++, j--)
+     {
+         sum = sum + i + j;
+     }
+     printf("the sum is %d\n", sum);
  }
