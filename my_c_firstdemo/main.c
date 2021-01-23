@@ -117,7 +117,7 @@ main()
      return 0;
  }*/
 
- int main()
+ /*int main()
  {
      int i, j, sum = 0;
      for(i=1, j=100; i<j; i++, j--)
@@ -125,4 +125,32 @@ main()
          sum = sum + i + j;
      }
      printf("the sum is %d\n", sum);
- }
+ }*/
+// 标志变量
+/*
+int main()
+ {
+     int i = 1;
+     int find = 0;
+     for(i = 1; !find; i++)
+        if (i % 5 == 1 && i % 6 == 5 && i % 7 == 4 && i % 11 == 10)
+        {
+          printf("i is:%d", i);
+          find = 1;
+        }
+     return 0;
+ }*/
+ // 函数
+int GetMax(int x, int y)
+{
+    if (x >= y)
+        return x;
+    else
+        return y;
+}
+int main()
+{
+    printf("%d", GetMax(4, 8));
+}
+
+
