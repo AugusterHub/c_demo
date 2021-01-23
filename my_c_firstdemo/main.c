@@ -108,7 +108,7 @@ main()
 /* int main()
  {
      int i, sum = 0, m;
-     for(i=0; i<5; i++)// 循环初始条件；循环控制条件；循环转化条件，分号注意！！！
+     for (i=0; i<5; i++)// 循环初始条件；循环控制条件；循环转化条件，分号注意！！！
      {
          scanf("%d", &m);
          sum += m;
@@ -120,7 +120,7 @@ main()
  /*int main()
  {
      int i, j, sum = 0;
-     for(i=1, j=100; i<j; i++, j--)
+     for (i=1, j=100; i<j; i++, j--)
      {
          sum = sum + i + j;
      }
@@ -132,7 +132,7 @@ int main()
  {
      int i = 1;
      int find = 0;
-     for(i = 1; !find; i++)
+     for (i = 1; !find; i++)
         if (i % 5 == 1 && i % 6 == 5 && i % 7 == 4 && i % 11 == 10)
         {
           printf("i is:%d", i);
@@ -141,7 +141,7 @@ int main()
      return 0;
  }*/
  // 函数
-int GetMax(int x, int y)
+/*int GetMax(int x, int y)
 {
     if (x >= y)
         return x;
@@ -150,7 +150,73 @@ int GetMax(int x, int y)
 }
 int main()
 {
-    printf("%d", GetMax(4, 8));
+    printf("%d", GetMax(4, 800));
+}*/
+
+
+// 数组&函数（计算器-10位评委减去最大值和最小值再取平均）
+
+#define N 5
+/* 输入分数 */
+void Input (int score[], int n)
+{
+    int i;
+    for (i=0; i<n; i++)
+    {
+        scanf("%d", &score[i]);
+    }
+    return 0;
 }
 
+/* 计算最大值 */
+int FindmaxScore(int score[], int n)
+{
+    int maxScore, i;
+    maxScore = score[0];
+    for (i=0; i<n; i++)
+    {
+        if (score[i] > maxScore)
+        {
+            maxScore = score[i];
+        }
+    }
+    return maxScore;
+}
+
+/* 计算最小值 */
+int FindminScore(int score[], int n)
+{
+    int minScore, i;
+    minScore = score[0];
+    for (i=0; i<n; i++)
+    {
+        if (score[i] < minScore)
+        {
+            minScore = score[i];
+        }
+    }
+    return minScore;
+}
+
+/* 求和 */
+int Total(int score[], int n)
+{
+    int i, sum = 0;
+    for (i=0; i<n; i++)
+    {
+        sum += score[i];
+    }
+    return sum;
+}
+
+int main()
+{
+    int score[N], maxScore, minScore, sum;
+    Input(score, N);
+    maxScore = FindmaxScore(score, N);
+    minScore = FindminScore(score, N);
+    sum = Total(score, N);
+    printf("the final score is %d\n", (sum - maxScore - minScore) / (N - 2));
+    return 0;
+}
 
