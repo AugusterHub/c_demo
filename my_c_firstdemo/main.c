@@ -156,9 +156,9 @@ int main()
 
 // 数组&函数（计算器-10位评委减去最大值和最小值再取平均）
 
-#define N 5
+//#define N 5
 /* 输入分数 */
-void Input (int score[], int n)
+/*void Input (int score[], int n)
 {
     int i;
     for (i=0; i<n; i++)
@@ -169,7 +169,7 @@ void Input (int score[], int n)
 }
 
 /* 计算最大值 */
-int FindmaxScore(int score[], int n)
+/*int FindmaxScore(int score[], int n)
 {
     int maxScore, i;
     maxScore = score[0];
@@ -182,9 +182,9 @@ int FindmaxScore(int score[], int n)
     }
     return maxScore;
 }
-
+*/
 /* 计算最小值 */
-int FindminScore(int score[], int n)
+/*int FindminScore(int score[], int n)
 {
     int minScore, i;
     minScore = score[0];
@@ -196,10 +196,10 @@ int FindminScore(int score[], int n)
         }
     }
     return minScore;
-}
+}*/
 
 /* 求和 */
-int Total(int score[], int n)
+/*int Total(int score[], int n)
 {
     int i, sum = 0;
     for (i=0; i<n; i++)
@@ -208,7 +208,8 @@ int Total(int score[], int n)
     }
     return sum;
 }
-
+*/
+/*
 int main()
 {
     int score[N], maxScore, minScore, sum;
@@ -219,4 +220,22 @@ int main()
     printf("the final score is %d\n", (sum - maxScore - minScore) / (N - 2));
     return 0;
 }
+*/
 
+// 指针
+
+/*测试指针变量与普通变量的含义*/
+int goSouthEast(int *lat, int *lon)
+{
+    *lat += 10;
+    *lon -= 10;
+}
+
+int main()
+{
+    int latitude = 32;
+    int longitude = 64;
+    goSouthEast(&latitude, &longitude);
+    printf("stop here [%i %i]\n", latitude, longitude);
+    return 0;
+}
